@@ -1,0 +1,12 @@
+print('Please enter the following quantities.')
+in_dep = int(input('  How much is the initial deposit? '))
+ann_rate = float(input('  What is the annual interest rate in percent? '))
+ann_rate_percent = ( ann_rate / 100 )
+time_per_year = int(float(input('  How many times per year is the interest compounded? ')))
+year = float(input('  How many years will the account be left to earn interest? '))
+step_one = (ann_rate_percent / time_per_year)
+step_two = (time_per_year * year)
+future_value = in_dep * ((1 + step_one)** step_two)
+future_value_formatted = f'{float(future_value):,.2f}'
+print('')
+print(f'At the end of 3.0 years, the account will be worth ${future_value_formatted}.')
